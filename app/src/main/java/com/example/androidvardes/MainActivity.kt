@@ -19,6 +19,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
@@ -54,7 +55,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun ComponetsGame(modifier: Modifier = Modifier) {
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .background(Color.Black),
         verticalArrangement = Arrangement.SpaceBetween
@@ -66,7 +67,45 @@ fun ComponetsGame(modifier: Modifier = Modifier) {
         }
 
         Column(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = modifier.fillMaxWidth(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Image(
+                modifier = Modifier
+                    .size(100.dp)
+                    .rotate(270f),
+                painter = painterResource(R.drawable.tiro),
+                contentDescription = "Tiro"
+            )
+
+            Image(
+                modifier = Modifier
+                    .size(100.dp)
+                    .rotate(270f),
+                painter = painterResource(R.drawable.tiro),
+                contentDescription = "Tiro"
+            )
+
+            Image(
+                modifier = Modifier
+                    .size(100.dp)
+                    .rotate(270f),
+                painter = painterResource(R.drawable.tiro),
+                contentDescription = "Tiro"
+            )
+
+            Image(
+                modifier = Modifier
+                    .size(100.dp)
+                    .rotate(270f),
+                painter = painterResource(R.drawable.tiro),
+                contentDescription = "Tiro"
+            )
+        }
+
+        Column(
+            modifier = modifier.fillMaxWidth(),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
